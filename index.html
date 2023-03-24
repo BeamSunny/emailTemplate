@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <title>Document</title>
+</head>
+
+<script>
+  const statusColor = {
+    'REJECT' : "#FF0000",
+    "APPROVE" : "#62BE3F",
+    "WAIT" : "#FBBC04"
+  }
+  const imagePreview = {
+    'REJECT' : "https://meca-email-template.s3.ap-southeast-1.amazonaws.com/previewReject.png",
+    "APPROVE" : "https://meca-email-template.s3.ap-southeast-1.amazonaws.com/preview.png",
+    "INVITE" : "https://meca-email-template.s3.ap-southeast-1.amazonaws.com/previewInvitation.png"
+  }
+</script>
+<style>
+  @font-face {
+    font-family: DBHelvethaicaXRegular;
+    src: url(fonts/DBHelvethaicaXRegular.ttf);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: DBHelvethaicaXRegular;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 33px;
+    font-weight: 700;
+  }
+
+  h5 {
+    font-size: 24px;
+  }
+
+  span,
+  h6 {
+    font-size: 20px;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+    background-color: #eaf0f3;
+    width: 100%;
+
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 50px 20px;
+    width: 90%;
+    margin: 20px;
+
+  }
+
+  .boxStatus {
+    display: flex;
+    gap: 20px;
+    padding: 10px 25px 10px 25px;
+    border: 1px solid rgba(94, 94, 94, 0.5);
+    background: rgba(234, 240, 243, 0.2);
+    width: 662px;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  .wrapperTextStatus {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .wrapperImg {
+    display: flex;
+    gap: 30px
+  }
+
+  .wrapperImg img {
+    width: 81px;
+    height: 34px
+  }
+
+  .pillStatus {
+    display: flex;
+    flex-direction: column;
+    background: #62be3f;
+    padding: 3px 10px 3px 10px;
+    color: #ffffff;
+    border-radius: 22px;
+  }
+
+  .groupPill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .groupText {
+    text-align: center;
+  }
+
+  .textTitle {
+    font-size: 20px;
+    font-weight: 700
+  }
+
+  .line {
+    border-left: 1px solid #5e5e5e;
+    opacity: 0.4
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .wrapperBox{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .boxImages {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .textFooter {
+    color: #666666;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .wrapperContent {
+    color: #666666;
+    text-align: center;
+  }
+
+  .groupBottom {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .buttonUpdate{
+    width: 100%;
+    font-size: 28px;
+    background-color: #FF0000;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px 5px 10px;
+    color: #ffffff;
+  }
+
+  @media screen and (max-width:768px) {
+    .boxStatus {
+      width: auto;
+    }
+
+    .line {
+      border-bottom: 1px solid #5e5e5e;
+      opacity: 0.4
+    }
+  }
+
+  @media screen and (max-width:425px) {
+    .container{
+      width: 80%;
+    }
+    .boxStatus {
+      width: auto;
+      flex-direction: column;
+    }
+
+    .groupBottom {
+      flex-direction: column;
+    }
+  }
+</style>
+
+
+
+<body>
+  <div class="container">
+    <div class="wrapperImg">
+      <img src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/logo.png" alt="" />
+      <img src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/mecaLogo.png" alt="" />
+    </div>
+    <section class="groupText">
+      <h1>
+        Hi สุรสิทธิ์ นามเรือง,
+      </h1>
+      <h1>
+        ยินดีด้วยคุณผ่านการตรวจสอบ
+      </h1>
+    </section>
+
+    <img src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/preview.png" alt="" />
+
+    <div class="wrapperBox">
+      <div class="boxStatus">
+        <section class="wrapperTextStatus">
+          <h5 style="font-weight: 700;">MECA Register:</h4>
+            <div>
+              <h5 class="textTitle">
+                Gen ID :
+                <span>2023MECAAJ0001</span>
+              </h5>
+  
+              <h5 class="textTitle">
+                สาขา : <span>Dolingar tetraligt</span>
+              </h5>
+  
+              <h5 class="textTitle">
+                University :
+                <span>Oraren vans redevysm parasam om ananera</span>
+              </h5>
+            </div>
+        </section>
+  
+        <div class="line"></div>
+  
+        <section class="wrapperTextStatus">
+          <h5 style="font-weight: 700">Status:</h5>
+          <div class="groupPill">
+            <div class="pillStatus">
+              <h6>ผ่านการตรวจสอบ</h6>
+            </div>
+          </div>
+          <h6>
+            Lorem Ipsum is simply dummy text of the printing
+          </h6>
+        </section>
+  
+  
+       
+  
+      </div>
+        <!------------------- if status Reject ---------------------->
+      <div class="boxStatus">
+        <section class="wrapperTextStatus">
+          <h5 style="font-weight: 700;">เหตุผลที่ถูกปฏิเสธการลงทะเบียน</h4>
+            <h6>
+              Lorem Ipsum is simply dummy text of the printing
+            </h6>
+        </section>
+      </div>
+
+      <div class="boxStatus">
+        <section class="wrapperTextStatus">
+          <h5 style="font-weight: 700;">คุณได้รับลิงก์เชิญจาก</h4>
+            <h6 style="font-weight: 700;">
+              Teacher: <span>ทิษยา ธารางาม</span>
+            </h6>
+        </section>
+      </div>
+      <button class="buttonUpdate">อัพเดทข้อมูล</button>
+       <!------------------- if status Reject ---------------------->
+
+    </div>
+
+   
+
+  </div>
+
+  <section class="footer">
+    <div class="box">
+      <div class="boxImages">
+        <a href="https://www.instagram.com/mitsubishifa_thailand/">
+          <img src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/ig.png" alt="" />
+        </a>
+
+        <a href="https://www.facebook.com/mitsubishifa.th/?locale=th_TH">
+          <img src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/facebook.png" alt="" />
+        </a>
+      </div>
+
+      <h6>
+        ©2023 Mitsubishi Electric (Thailand) Co., Ltd.
+      </h6>
+      <h6 style="font-weight: 700">
+        Mitsubishi Electric (Thailand) Co., Ltd.
+      </h6>
+
+    </div>
+    <h6 class="textFooter">
+      ติดต่อทีมงาน
+    </h6>
+
+    <section class="groupBottom">
+      <div class="wrapperContent">
+        <h6>K. Sureerat Phadungsakviriya (Senior Marketing Engineer)
+        </h6>
+        <h6> Email Sureerat@mitsubishifa.co.th
+        </h6>
+        <h6>Tel 0963644994</h6>
+      </div>
+
+      <div class="wrapperContent">
+        <h6>K. Sureerat Phadungsakviriya (Senior Marketing Engineer)
+        </h6>
+        <h6> Email Sureerat@mitsubishifa.co.th
+        </h6>
+        <h6>Tel 0963644994</h6>
+      </div>
+    </section>
+
+
+
+
+    </div>
+  </section>
+</body>
+
+</html>
