@@ -5,27 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
 
   <title>Document</title>
 </head>
 
-<script>
-  const statusColor = {
-    'REJECT': "#FF0000",
-    "APPROVE": "#62BE3F",
-    "WAIT": "#FBBC04"
-  }
-  const imagePreview = {
-    'REJECT': "https://meca-email-template.s3.ap-southeast-1.amazonaws.com/previewReject.png",
-    "APPROVE": "https://meca-email-template.s3.ap-southeast-1.amazonaws.com/preview.png",
-    "INVITE": "https://meca-email-template.s3.ap-southeast-1.amazonaws.com/previewInvitation.png"
-  }
-</script>
 <style>
   @font-face {
     font-family: DBHelvethaicaXRegular;
-    src: url(fonts/DBHelvethaicaXRegular.ttf);
+    src: url(https://meca-email-template.s3.ap-southeast-1.amazonaws.com/fonts/DBHelvethaicaXRegular.ttf);
   }
 
   * {
@@ -63,13 +50,6 @@
     max-width: 800px;
   }
 
-  .logoLine {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    justify-content: center;
-  }
-
   .textCenter {
     text-align: center;
   }
@@ -95,9 +75,9 @@
   }
 
   .box {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px; */
     width: 50%;
     padding: 0 20px;
   }
@@ -108,9 +88,9 @@
 
   @media screen and (max-width:425px) {
     .box {
-      display: flex;
+      /* display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 10px; */
       width: calc(100%);
       padding: 0;
     }
@@ -123,19 +103,19 @@
   }
 
   .boxSingle {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 50%;
+    gap: 10px; */
+    width: 100%;
     padding: 0 20px;
   }
 
   @media screen and (max-width:425px) {
     .boxSingle {
-      display: flex;
+      /* display: flex;
       flex-direction: column;
-      gap: 10px;
-      width: calc(100%);
+      gap: 10px; */
+      width: 100%;
       padding: 0;
     }
   }
@@ -147,6 +127,7 @@
     padding: 3px 10px 3px 10px;
     color: #ffffff;
     border-radius: 22px;
+    height: fit-content;
   }
 
   .groupPill {
@@ -156,14 +137,15 @@
   }
 
   .buttonUpdate {
-    width: calc(100% - 40px);
+    /* width: calc(100% - 40px); */
+    width: 100%;
     font-size: 28px;
     background-color: #FF0000;
     border: none;
     border-radius: 4px;
     padding: 5px 10px 5px 10px;
     color: #ffffff;
-    margin: 10px 20px 0 20px;
+    margin: 10px 0px 0 0px;
   }
 
   @media screen and (max-width:425px) {
@@ -180,10 +162,7 @@
   }
 
   .rowFooter {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
+    text-align: center;
   }
 
   .rowFooter img {
@@ -207,8 +186,7 @@
   .rowContact {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 20px;
+    width: 100%;
   }
 
   @media screen and (max-width:425px) {
@@ -223,7 +201,7 @@
 <body>
   <table class="mainTable">
     <tr>
-      <td class="logoLine">
+      <td class="textCenter">
         <img width="81" height="34" src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/logo.png" alt="" />
         <img width="81" height="34" src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/mecaLogo.png"
           alt="" />
@@ -322,7 +300,8 @@
         </a>
 
         <a href="https://web.facebook.com/mitsubishifa.th?_rdc=1&_rdr">
-          <img width="35" height="35" src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/facebook.png" alt="" />
+          <img width="35" height="35" src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/facebook.png"
+            alt="" />
         </a>
 
         <a href="https://www.linkedin.com/company/mitsubishifa-th/">
@@ -330,11 +309,13 @@
         </a>
 
         <a href="https://www.youtube.com/channel/UCgXBLR1jWSrzwBE9-AUO9cA">
-          <img width="35" height="35" src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/youtube.png" alt="" />
+          <img width="35" height="35" src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/youtube.png"
+            alt="" />
         </a>
 
         <a href="https://page.line.me/mitsubishifa.th?openQrModal=true">
-          <img width="35" height="35" src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/line-official.svg" alt="" />
+          <img width="35" height="35" src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/line.png"
+            alt="" />
         </a>
       </td>
     </tr>
@@ -358,12 +339,12 @@
     <tr>
       <td>
         <div class="rowContact">
-          <div>
+          <div style="width: 100%;">
             <h6><span>K. Sureerat Phadungsakviriya (Senior Marketing Engineer)</span></h6>
             <h6><span>Email Sureerat@mitsubishifa.co.th
               </span></h6>
           </div>
-          <div>
+          <div style="width: 100%;">
             <h6><span>K. Sureerat Phadungsakviriya (Senior Marketing Engineer)</span></h6>
             <h6><span>Email Sureerat@mitsubishifa.co.th
               </span></h6>
