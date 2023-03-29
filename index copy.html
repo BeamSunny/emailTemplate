@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <title>Document</title>
+</head>
+
+<script>
+  const statusColor = {
+    'REJECT': "#FF0000",
+    "APPROVE": "#62BE3F",
+    "WAIT": "#FBBC04"
+  }
+  const imagePreview = {
+    'REJECT': "https://meca-email-template.s3.ap-southeast-1.amazonaws.com/previewReject.png",
+    "APPROVE": "https://meca-email-template.s3.ap-southeast-1.amazonaws.com/preview.png",
+    "INVITE": "https://meca-email-template.s3.ap-southeast-1.amazonaws.com/previewInvitation.png"
+  }
+</script>
+<style>
+  @font-face {
+    font-family: DBHelvethaicaXRegular;
+    src: url(fonts/DBHelvethaicaXRegular.ttf);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: DBHelvethaicaXRegular;
+    font-weight: 100;
+  }
+
+  h1 {
+    font-size: 33px;
+    font-weight: 700;
+  }
+
+  h5 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  h6 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  body {
+    background-color: #eaf0f3;
+    margin: 30px 0;
+  }
+
+  .mainTable {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  .logoLine {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .textCenter {
+    text-align: center;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background: rgba(234, 240, 243, 0.2);
+    border: 1px solid rgba(94, 94, 94, 0.5);
+    border-radius: 6px;
+    padding: 20px 0;
+    margin: 10px 0 0 0;
+  }
+
+  @media screen and (max-width:425px) {
+    .row {
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px 20px;
+    }
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    padding: 0 20px;
+  }
+
+  .box:last-child {
+    border-left: 1px solid rgba(94, 94, 94, 0.5);
+  }
+
+  @media screen and (max-width:425px) {
+    .box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: calc(100%);
+      padding: 0;
+    }
+
+    .box:last-child {
+      border-left: none;
+      border-top: 1px solid rgba(94, 94, 94, 0.5);
+      padding-top: 10px;
+    }
+  }
+
+  .boxSingle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    padding: 0 20px;
+  }
+
+  @media screen and (max-width:425px) {
+    .boxSingle {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: calc(100%);
+      padding: 0;
+    }
+  }
+
+  .pillStatus {
+    display: flex;
+    flex-direction: column;
+    background: #62be3f;
+    padding: 3px 10px 3px 10px;
+    color: #ffffff;
+    border-radius: 22px;
+  }
+
+  .groupPill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttonUpdate {
+    width: 100%;
+    font-size: 28px;
+    background-color: #FF0000;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px 5px 10px;
+    color: #ffffff;
+    margin: 10px 0 0 0;
+  }
+
+  .footerTable {
+    padding: 50px 20px 10px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .rowFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .colorGray {
+    color: #666666;
+  }
+
+  .marginTop {
+    margin-top: 20px;
+  }
+
+  .contactTable {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .rowContact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  @media screen and (max-width:425px) {
+    .rowContact {
+      flex-direction: column;
+    }
+  }
+</style>
+
+
+
+<body>
+  <table class="mainTable">
+    <tr>
+      <td class="logoLine">
+        <img width="81" height="34" src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/logo.png" alt="" />
+        <img width="81" height="34" src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/mecaLogo.png"
+          alt="" />
+      </td>
+    </tr>
+    <tr>
+      <td class="textCenter">
+        <h1>
+          Hi สุรสิทธิ์ นามเรือง,
+        </h1>
+        <h1>
+          ยินดีด้วยคุณผ่านการตรวจสอบ
+        </h1>
+      </td>
+    </tr>
+    <tr>
+      <td class="textCenter">
+        <img src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/preview.png" alt="" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="row">
+          <div class="box">
+            <h5>MECA Register:</h5>
+            <div>
+              <h6>
+                Gen ID :
+                <span>2023MECAAJ0001</span>
+              </h6>
+
+              <h6>
+                สาขา : <span>Dolingar tetraligt</span>
+              </h6>
+
+              <h6>
+                University :
+                <span>Oraren vans redevysm parasam om ananera</span>
+              </h6>
+            </div>
+          </div>
+          <div class="box">
+            <h5>Status:</h5>
+            <div class="groupPill">
+              <div class="pillStatus">
+                <h6>ผ่านการตรวจสอบ</h6>
+              </div>
+            </div>
+            <h6>
+              <span>
+                Lorem Ipsum is simply dummy text of the printing
+                Lorem Ipsum is simply dummy text of the printing</span>
+            </h6>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="row">
+          <div class="boxSingle">
+            <h5>เหตุผลที่ถูกปฏิเสธการลงทะเบียน</h5>
+            <div>
+              <h6>
+                <span>Lorem Ipsum is simply dummy text of the printing
+                </span>
+              </h6>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="row">
+          <div class="boxSingle">
+            <h5>คุณได้รับลิงก์เชิญจาก</h5>
+            <div>
+              <h6>Teacher:
+                <span>ทิษยา ธารางาม
+                  ting
+                </span>
+              </h6>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button class="buttonUpdate">อัพเดทข้อมูล</button>
+      </td>
+    </tr>
+  </table>
+  <table class="footerTable">
+    <tr>
+      <td class="rowFooter">
+        <a href="https://www.instagram.com/mitsubishifa_thailand/">
+          <img src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/ig.png" alt="" />
+        </a>
+
+        <a href="https://www.facebook.com/mitsubishifa.th/?locale=th_TH">
+          <img src="https://meca-email-template.s3.ap-southeast-1.amazonaws.com/facebook.png" alt="" />
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td class="textCenter">
+        <h6><span>©2023 Mitsubishi Electric (Thailand) Co., Ltd.</span< /h6>
+      </td>
+    </tr>
+    <tr>
+      <td class="textCenter">
+        <h6>Mitsubishi Electric (Thailand) Co., Ltd.</h6>
+      </td>
+    </tr>
+    <tr>
+      <td class="textCenter">
+        <h6 class="colorGray marginTop">ติดต่อทีมงาน</h6>
+      </td>
+    </tr>
+  </table>
+  <table class="contactTable textCenter colorGray">
+    <tr>
+      <td>
+        <div class="rowContact">
+          <div>
+            <h6><span>K. Sureerat Phadungsakviriya (Senior Marketing Engineer)</span></h6>
+            <h6><span>Email Sureerat@mitsubishifa.co.th
+              </span></h6>
+            <h6><span>Tel 0963644994
+              </span></h6>
+          </div>
+          <div>
+            <h6><span>K. Sureerat Phadungsakviriya (Senior Marketing Engineer)</span></h6>
+            <h6><span>Email Sureerat@mitsubishifa.co.th
+              </span></h6>
+            <h6><span>Tel 0963644994</span></h6>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
