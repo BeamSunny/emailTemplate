@@ -23,21 +23,6 @@
     font-weight: 100;
   }
 
-  h1 {
-    font-size: 33px;
-    font-weight: 700;
-  }
-
-  h5 {
-    font-size: 24px;
-    font-weight: 700;
-  }
-
-  h6 {
-    font-size: 20px;
-    font-weight: 700;
-  }
-
   body {
     background-color: #eaf0f3;
     margin: 30px 0;
@@ -48,7 +33,7 @@
     padding: 50px 0px;
     width: 90%;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 400px;
   }
 
   .textCenter {
@@ -67,28 +52,6 @@
     .row {
       gap: 20px;
       padding: 20px 20px;
-    }
-  }
-
-  .box {
-    width: 50%;
-    padding: 0 20px;
-  }
-
-  .box:last-child {
-    border-left: 1px solid rgba(94, 94, 94, 0.5);
-  }
-
-  @media screen and (max-width:425px) {
-    .box {
-      width: 100%;
-      padding: 0;
-    }
-
-    .box:last-child {
-      border-left: none;
-      border-top: 1px solid rgba(94, 94, 94, 0.5);
-      padding-top: 10px;
     }
   }
 
@@ -115,7 +78,6 @@
 
   .buttonUpdate {
     width: 100%;
-    font-size: 28px;
     background-color: #FF0000;
     border: none;
     border-radius: 4px;
@@ -155,20 +117,6 @@
   .rowContact {
     width: 100%;
   }
-
-  .showInMobile {
-    display: none;
-  }
-
-  @media screen and (max-width:425px) {
-    .hiddenInMobile {
-      display: none;
-    }
-
-    .showInMobile {
-    display: table;
-  }
-  }
 </style>
 
 
@@ -199,81 +147,33 @@
     </tr>
     <tr>
       <td>
-        <table cellpadding="0" cellspacing="0" border="0" class="row hiddenInMobile">
+        <table cellpadding="0" cellspacing="0" border="0" class="row">
           <tr>
-            <td class="box">
-              <h5>MECA Register:</h5>
-            </td>
-            <td class="box">
-              <h5>Status:</h5>
+            <td class="boxSingle">
+              <h3>MECA Register:</h3>
             </td>
           </tr>
           <tr>
-            <td class="box">
-              <h6>
+            <td class="boxSingle">
+              <h3>
                 Gen ID :
                 <span>2023MECAAJ0001</span>
-              </h6>
-            </td>
-            <td class="box">
-              <h6 class="pillStatus">ผ่านการตรวจสอบ</h6>
+              </h3>
             </td>
           </tr>
           <tr>
-            <td class="box">
-              <h6>
+            <td class="boxSingle">
+              <h3>
                 สาขา : <span>Dolingar tetraligt</span>
-              </h6>
+              </h3>
             </td>
-            <td class="box"></td>
           </tr>
           <tr>
-            <td class="box">
-              <h6>
+            <td class="boxSingle">
+              <h3>
                 University :
                 <span>Oraren vans redevysm parasam om ananera</span>
-              </h6>
-            </td>
-            <td class="box"></td>
-          </tr>
-        </table>
-        <table cellpadding="0" cellspacing="0" border="0" class="row showInMobile">
-          <tr>
-            <td class="boxSingle">
-              <h5>MECA Register:</h5>
-            </td>
-          </tr>
-          <tr>
-            <td class="boxSingle">
-              <h6>
-                Gen ID :
-                <span>2023MECAAJ0001</span>
-              </h6>
-            </td>
-          </tr>
-          <tr>
-            <td class="boxSingle">
-              <h6>
-                สาขา : <span>Dolingar tetraligt</span>
-              </h6>
-            </td>
-          </tr>
-          <tr>
-            <td class="boxSingle">
-              <h6>
-                University :
-                <span>Oraren vans redevysm parasam om ananera</span>
-              </h6>
-            </td>
-          </tr>
-          <tr>
-            <td class="boxSingle">
-              <h5>Status:</h5>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h6 class="pillStatus">ผ่านการตรวจสอบ</h6>
+              </h3>
             </td>
           </tr>
         </table>
@@ -284,11 +184,27 @@
         <table cellpadding="0" cellspacing="0" border="0" class="row">
           <tr>
             <td class="boxSingle">
-              <h5>เหตุผลที่ถูกปฏิเสธการลงทะเบียน</h5>
-              <h6>
+              <h3>Status:</h3>
+            </td>
+          </tr>
+          <tr>
+            <td class="boxSingle">
+              <h3 class="pillStatus">ผ่านการตรวจสอบ</h3>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table cellpadding="0" cellspacing="0" border="0" class="row">
+          <tr>
+            <td class="boxSingle">
+              <h3>เหตุผลที่ถูกปฏิเสธการลงทะเบียน</h3>
+              <h3>
                 <span>Lorem Ipsum is simply dummy text of the printing
                 </span>
-              </h6>
+              </h3>
             </td>
           </tr>
         </table>
@@ -299,12 +215,12 @@
         <table cellpadding="0" cellspacing="0" border="0" class="row">
           <tr>
             <td class="boxSingle">
-              <h5>คุณได้รับลิงก์เชิญจาก</h5>
-              <h6>Teacher:
+              <h3>คุณได้รับลิงก์เชิญจาก</h3>
+              <h3>Teacher:
                 <span>ทิษยา ธารางาม
                   ting
                 </span>
-              </h6>
+              </h3>
             </td>
           </tr>
         </table>
@@ -312,7 +228,7 @@
     </tr>
     <tr>
       <td>
-        <button class="buttonUpdate">อัพเดทข้อมูล</button>
+        <button class="buttonUpdate"><h3>อัพเดทข้อมูล</h3></button>
       </td>
     </tr>
   </table>
@@ -346,70 +262,44 @@
     </tr>
     <tr>
       <td class="textCenter">
-        <h6><span>©2023 Mitsubishi Electric (Thailand) Co., Ltd.</span></h6>
+        <h3><span>©2023 Mitsubishi Electric (Thailand) Co., Ltd.</span></h3>
       </td>
     </tr>
     <tr>
       <td class="textCenter">
-        <h6>Mitsubishi Electric (Thailand) Co., Ltd.</h6>
+        <h3>Mitsubishi Electric (Thailand) Co., Ltd.</h3>
       </td>
     </tr>
     <tr>
       <td class="textCenter">
-        <h6 class="colorGray marginTop">ติดต่อทีมงาน</h6>
+        <h3 class="colorGray marginTop">ติดต่อทีมงาน</h3>
       </td>
     </tr>
   </table>
-  <table class="contactTable textCenter colorGray hiddenInMobile">
-    <tr>
-      <td>
-        <table cellpadding="0" cellspacing="0" border="0" class="rowContact">
-          <tr>
-            <td style="width: 50%;">
-              <h6><span>K. Sureerat Phadungsakviriya (Senior Marketing Engineer)</span></h6>
-            </td>
-            <td style="width: 50%;">
-              <h6><span>K. Sureerat Phadungsakviriya (Senior Marketing Engineer)</span></h6>
-            </td>
-          </tr>
-          <tr>
-            <td style="width: 50%;">
-              <h6><span>Email Sureerat@mitsubishifa.co.th
-                </span></h6>
-            </td>
-            <td style="width: 50%;">
-              <h6><span>Email Sureerat@mitsubishifa.co.th
-                </span></h6>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-  <table class="contactTable textCenter colorGray showInMobile">
+  <table class="contactTable textCenter colorGray">
     <tr>
       <td>
         <table cellpadding="0" cellspacing="0" border="0" class="rowContact">
           <tr>
             <td style="width: 100%;">
-              <h6><span>K. Sureerat Phadungsakviriya (Senior Marketing Engineer)</span></h6>
+              <h3><span>K. Sureerat Phadungsakviriya (Senior Marketing Engineer)</span></h3>
             </td>
           </tr>
           <tr>
             <td style="width: 100%;">
-              <h6><span>Email Sureerat@mitsubishifa.co.th
-                </span></h6>
+              <h3><span>Email Sureerat@mitsubishifa.co.th
+                </span></h3>
             </td>
           </tr>
           <tr>
             <td style="width: 100%;">
-              <h6 style="margin-top: 20px;"><span>K. Sureerat Phadungsakviriya (Senior Marketing Engineer)</span></h6>
+              <h3 style="margin-top: 20px;"><span>K. Sureerat Phadungsakviriya (Senior Marketing Engineer)</span></h3>
             </td>
           </tr>
           <tr>
             <td style="width: 100%;">
-              <h6><span>Email Sureerat@mitsubishifa.co.th
-                </span></h6>
+              <h3><span>Email Sureerat@mitsubishifa.co.th
+                </span></h3>
             </td>
           </tr>
         </table>
